@@ -1,1 +1,3 @@
 Fakultet elektrotehnike i raèunarstva, Oblikovanje programske potpore
+
+Proba za push, DB
