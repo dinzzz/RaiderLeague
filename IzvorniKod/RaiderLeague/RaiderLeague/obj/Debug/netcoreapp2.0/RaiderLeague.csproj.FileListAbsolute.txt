@@ -1,0 +1,11 @@
+C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\bin\Debug\netcoreapp2.0\RaiderLeague.deps.json
+C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\bin\Debug\netcoreapp2.0\RaiderLeague.runtimeconfig.json
+C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\bin\Debug\netcoreapp2.0\RaiderLeague.runtimeconfig.dev.json
+C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\bin\Debug\netcoreapp2.0\RaiderLeague.dll
+C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\bin\Debug\netcoreapp2.0\RaiderLeague.pdb
+C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\obj\Debug\netcoreapp2.0\RaiderLeague.csprojResolveAssemblyReference.cache
+C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\obj\Debug\netcoreapp2.0\RaiderLeague.csproj.CoreCompileInputs.cache
+C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\obj\Debug\netcoreapp2.0\RaiderLeague.AssemblyInfoInputs.cache
+C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\obj\Debug\netcoreapp2.0\RaiderLeague.AssemblyInfo.cs
+C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\obj\Debug\netcoreapp2.0\RaiderLeague.dll
+C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\obj\Debug\netcoreapp2.0\RaiderLeague.pdb
