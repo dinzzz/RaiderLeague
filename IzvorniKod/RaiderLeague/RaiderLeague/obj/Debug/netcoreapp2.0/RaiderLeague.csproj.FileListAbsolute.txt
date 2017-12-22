@@ -9,3 +9,5 @@ C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\obj\Debug\netcore
 C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\obj\Debug\netcoreapp2.0\RaiderLeague.AssemblyInfo.cs
 C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\obj\Debug\netcoreapp2.0\RaiderLeague.dll
 C:\Users\ivan\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\obj\Debug\netcoreapp2.0\RaiderLeague.pdb
+C:\Users\Dinz\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\obj\Debug\netcoreapp2.0\RaiderLeague.dll
+C:\Users\Dinz\Antitalenti\IzvorniKod\RaiderLeague\RaiderLeague\obj\Debug\netcoreapp2.0\RaiderLeague.pdb
