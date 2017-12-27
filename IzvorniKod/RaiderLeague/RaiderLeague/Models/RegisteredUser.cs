@@ -47,6 +47,10 @@ namespace RaiderLeague.Models
         // u narednim redovima -- checkirati da li su potrebni ovi usernameovi
         // i passwordi u metodama add/remove i login i provjeriti kaj je s delete i ID-em
         // također i izmjeniti dijagram klasa u dokumentaciji sukladno s onim kak treba bit
+        public void setAccessLevel( AccessLevel a)
+        {
+            this.accessLevel = a; 
+        }
         public void addMedal(MedalType medal, String username)
         {
             medals.Add(medal);

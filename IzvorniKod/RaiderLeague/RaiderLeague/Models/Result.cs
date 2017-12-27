@@ -18,7 +18,7 @@ namespace RaiderLeague.Models
         }
         // popraviti -- File ne moze biti parametar
         // i difficulty se ne moze procitat
-        public void result(File log, Difficulty t)
+        public void result(String log, Difficulty t)
         {
         }
 

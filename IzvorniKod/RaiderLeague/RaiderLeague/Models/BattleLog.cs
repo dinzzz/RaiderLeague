@@ -19,6 +19,7 @@ namespace RaiderLeague.Models
             IZAZIVAC, NAPADAC, ISJELITELJ
         };
 
+        String log;
         int battleLogID;
         Role role { get; set; }
         Difficulty difficulty { get; set; }
@@ -26,8 +27,15 @@ namespace RaiderLeague.Models
         String player;
         Klasa k;
 
+
         // opet u dijagramu klasa File u konstruktoru
-        public BattleLog(Difficulty t, File log; 
+        public BattleLog (Difficulty t, String log,Boss b,Klasa k)
+        {
+            this.boss = b;
+            this.difficulty = t;
+            this.log = log;
+            this.k = k;
+        }
 
     }
 }

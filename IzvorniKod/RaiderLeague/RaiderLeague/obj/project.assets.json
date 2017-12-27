@@ -12533,7 +12533,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dinz\\.nuget\\packages\\": {},
+    "C:\\Users\\ivan\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -12542,17 +12542,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dinz\\source\\repos\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
+      "projectUniqueName": "C:\\Users\\ivan\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
       "projectName": "RaiderLeague",
-      "projectPath": "C:\\Users\\Dinz\\source\\repos\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
-      "packagesPath": "C:\\Users\\Dinz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dinz\\source\\repos\\RaiderLeague\\RaiderLeague\\obj\\",
+      "projectPath": "C:\\Users\\ivan\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
+      "packagesPath": "C:\\Users\\ivan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ivan\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Dinz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12576,14 +12576,14 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
-          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "[2.0.0, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           }
         },
         "imports": [
