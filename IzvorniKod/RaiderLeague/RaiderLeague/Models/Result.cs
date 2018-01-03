@@ -8,22 +8,23 @@ namespace RaiderLeague.Models
 {
     public class Result
     {
-        int resultID;
-        float HPS;
-        float TPS;
-        float DPS;
+        public int ID { get; set; }
+        public float HPS;
+        public float TPS;
+        public float DPS;
 
         public void calculateResult()
         {
         }
         // popraviti -- File ne moze biti parametar
         // i difficulty se ne moze procitat
-        public void result(String log, Difficulty t)
+       /* public void result(String log, Difficulty t)
         {
-        }
+        }*/
 
         public String getStatistics()
         {
+            return "";
         }
     }
 }

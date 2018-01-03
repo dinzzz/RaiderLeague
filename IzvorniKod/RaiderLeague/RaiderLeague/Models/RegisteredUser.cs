@@ -1,5 +1,8 @@
-﻿using System;
+﻿//using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -23,30 +26,33 @@ namespace RaiderLeague.Models
             MALA_ZLATO, MALA_SREBRO, MALA_BRONCA
         };
 
+       
+        public int ID { get; set; }
 
+         public String Username { get; set; } 
 
-        String username { get; }
-        String email { get; }
-        String password { get; set; }
-        String name;
-        String surname;
-        bool loggedOn { get; set; }
-        AccessLevel accessLevel { get; set; }
-        List<MedalType> medals { get; }
-        List<Result> results { get; }
-        Klasa klasa;
-        List<BattleLog> battleLogs;
-
-        public RegisteredUser(String username, String email, String password, Klasa k)
+        public String Email { get; set; }
+        public String Password { get; set; }
+        //String name;
+        //String surname;
+        //bool loggedOn { get; set; }
+        //AccessLevel accessLevel { get; set; }
+       // List<MedalType> medals { get; }
+        //List<Result> results { get; }
+        //Klasa klasa;
+        //List<BattleLog> battleLogs;
+        /*
+        public RegisteredUser(String username, String email, String password)
         {
             this.username = username;
             this.email = email;
             this.password = password;
-            this.klasa = k;
-        }
+        }*/
+
         // u narednim redovima -- checkirati da li su potrebni ovi usernameovi
         // i passwordi u metodama add/remove i login i provjeriti kaj je s delete i ID-em
         // također i izmjeniti dijagram klasa u dokumentaciji sukladno s onim kak treba bit
+        /*
         public void setAccessLevel( AccessLevel a)
         {
             this.accessLevel = a; 
@@ -83,7 +89,7 @@ namespace RaiderLeague.Models
 
         public void deleteUser()
         {
-        }
+        }*/
 
         
 
