@@ -13162,7 +13162,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ivan\\.nuget\\packages\\": {},
+    "C:\\Users\\Dinz\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13171,17 +13171,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\ivan\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
+      "projectUniqueName": "C:\\Users\\Dinz\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
       "projectName": "RaiderLeague",
-      "projectPath": "C:\\Users\\ivan\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
-      "packagesPath": "C:\\Users\\ivan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ivan\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\obj\\",
+      "projectPath": "C:\\Users\\Dinz\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
+      "packagesPath": "C:\\Users\\Dinz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dinz\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dinz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13205,26 +13205,26 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "EntityFramework": {
-            "target": "Package",
-            "version": "[6.2.0, )"
-          },
-          "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "[2.0.3, )"
-          },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "[2.0.1, )"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "[2.0.0, )",
-            "autoReferenced": true
+            "version": "2.0.1"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "[2.0.1, )"
+            "version": "2.0.1"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "2.0.0",
+            "autoReferenced": true
+          },
+          "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "2.0.3"
+          },
+          "EntityFramework": {
+            "target": "Package",
+            "version": "6.2.0"
           }
         },
         "imports": [

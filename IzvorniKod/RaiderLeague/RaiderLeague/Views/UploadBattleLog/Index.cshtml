@@ -1,0 +1,15 @@
+﻿@model RaiderLeague.Models.BattleLogUpload
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Uploaded", "UploadBattleLog", FormMethod.Post))
+{
+    @Html.TextBoxFor(model => model.battleLogUpload)
+    @Html.ValidationMessageFor(model => model.battleLogUpload)
+    <button type="submit">Upload</button>
+}
+

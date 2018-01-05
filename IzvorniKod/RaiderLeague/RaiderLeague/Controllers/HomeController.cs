@@ -33,7 +33,7 @@ namespace RaiderLeague.Controllers
         {
             ViewData["Message"] = "Login for registered users.";
 
-            return View();
+            return RedirectToAction("Create", "Login");
         }
         public IActionResult Leaderboard()
         {
