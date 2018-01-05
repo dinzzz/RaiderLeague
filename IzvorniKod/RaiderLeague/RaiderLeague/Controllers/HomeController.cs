@@ -29,6 +29,19 @@ namespace RaiderLeague.Controllers
             return View();
         }
 
+        public IActionResult Login()
+        {
+            ViewData["Message"] = "Login for registered users.";
+
+            return View();
+        }
+
+        public IActionResult Register()
+        {
+            ViewData["Message"] = "Registration for unregistered users";
+            return View();
+        }
+
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
