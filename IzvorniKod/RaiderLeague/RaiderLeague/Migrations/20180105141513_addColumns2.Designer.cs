@@ -11,7 +11,7 @@ using System;
 namespace RaiderLeague.Migrations
 {
     [DbContext(typeof(RaiderLeagueContext))]
-    [Migration("20180103111331_addColumns2")]
+    [Migration("20180105141513_addColumns2")]
     partial class addColumns2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -79,6 +79,8 @@ namespace RaiderLeague.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Email");
+
+                    b.Property<int>("Klasa");
 
                     b.Property<string>("Password");
 

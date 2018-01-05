@@ -79,6 +79,8 @@ namespace RaiderLeague.Migrations
 
                     b.Property<string>("Email");
 
+                    b.Property<int>("Klasa");
+
                     b.Property<string>("Password");
 
                     b.Property<string>("Username");
