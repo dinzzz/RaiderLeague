@@ -8,16 +8,17 @@ namespace RaiderLeague.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "Username",
+            migrationBuilder.AddColumn<int>(
+                name: "Klasa",
                 table: "RegisteredUser",
-                nullable: true);
+                nullable: false,
+                defaultValue: 0);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "Username",
+                name: "Klasa",
                 table: "RegisteredUser");
         }
     }

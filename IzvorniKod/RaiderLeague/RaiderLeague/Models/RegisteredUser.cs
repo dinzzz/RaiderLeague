@@ -1,4 +1,5 @@
 ﻿//using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -18,7 +19,7 @@ namespace RaiderLeague.Models
         {
             ADMIN, USER
         };
-       
+
 
         public enum MedalType
         {
@@ -26,10 +27,10 @@ namespace RaiderLeague.Models
             MALA_ZLATO, MALA_SREBRO, MALA_BRONCA
         };
 
-       
+
         public int ID { get; set; }
 
-         public String Username { get; set; } 
+        public String Username { get; set; }
 
         public String Email { get; set; }
         public String Password { get; set; }
@@ -37,67 +38,79 @@ namespace RaiderLeague.Models
         //String surname;
         //bool loggedOn { get; set; }
         //AccessLevel accessLevel { get; set; }
-       // List<MedalType> medals { get; }
+        // List<MedalType> medals { get; }
         //List<Result> results { get; }
-        //Klasa klasa;
+        public Klasa Klasa { get; set; }
         //List<BattleLog> battleLogs;
-        /*
-        public RegisteredUser(String username, String email, String password)
+        public static List<SelectListItem> GetKlasaValues()
         {
-            this.username = username;
-            this.email = email;
-            this.password = password;
-        }*/
-
-        // u narednim redovima -- checkirati da li su potrebni ovi usernameovi
-        // i passwordi u metodama add/remove i login i provjeriti kaj je s delete i ID-em
-        // također i izmjeniti dijagram klasa u dokumentaciji sukladno s onim kak treba bit
-        /*
-        public void setAccessLevel( AccessLevel a)
-        {
-            this.accessLevel = a; 
+            return new List<SelectListItem>
+           {
+            new SelectListItem { Text = "CAROBNJAK", Value = "CAROBNJAK" },
+            new SelectListItem { Text = "AGENT", Value = "AGENT" },
+            new SelectListItem { Text="RATNIK" ,Value ="RATNIK"},
+            new SelectListItem { Text ="PLACENIK", Value ="PLACENIK" }
+            };
         }
-        public void addMedal(MedalType medal, String username)
-        {
-            medals.Add(medal);
-        }
+    
+    /*
 
-        public void removeMedal(MedalType medal, String username)
-        {
-            medals.Remove(medal);
-        }
+    public RegisteredUser(String username, String email, String password)
+    {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }*/
 
-        public void addResult(Result result)
-        {
-            results.Add(result);
-        }
-
-        public void removeResult(Result result)
-        {
-            results.Remove(result);
-        }
-
-        public void login(String username, String password)
-        {
-            loggedOn = true;
-        }
-
-        public void logout()
-        {
-            loggedOn = false;
-        }
-
-        public void deleteUser()
-        {
-        }*/
-
-        
-
-
-
-
-
-
-
+    // u narednim redovima -- checkirati da li su potrebni ovi usernameovi
+    // i passwordi u metodama add/remove i login i provjeriti kaj je s delete i ID-em
+    // također i izmjeniti dijagram klasa u dokumentaciji sukladno s onim kak treba bit
+    /*
+    public void setAccessLevel( AccessLevel a)
+    {
+        this.accessLevel = a; 
     }
+    public void addMedal(MedalType medal, String username)
+    {
+        medals.Add(medal);
+    }
+
+    public void removeMedal(MedalType medal, String username)
+    {
+        medals.Remove(medal);
+    }
+
+    public void addResult(Result result)
+    {
+        results.Add(result);
+    }
+
+    public void removeResult(Result result)
+    {
+        results.Remove(result);
+    }
+
+    public void login(String username, String password)
+    {
+        loggedOn = true;
+    }
+
+    public void logout()
+    {
+        loggedOn = false;
+    }
+
+    public void deleteUser()
+    {
+    }*/
+
+
+
+
+
+
+
+
+
+}
 }

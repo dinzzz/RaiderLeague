@@ -38,8 +38,8 @@ namespace RaiderLeague.Controllers
 
         public IActionResult Register()
         {
-            ViewData["Message"] = "Registration for unregistered users";
-            return View();
+            //ViewData["Message"] = "Registration for unregistered users";
+            return RedirectToAction("Create", "Register");
         }
 
         public IActionResult Error()
