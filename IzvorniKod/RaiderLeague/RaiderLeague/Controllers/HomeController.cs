@@ -35,6 +35,10 @@ namespace RaiderLeague.Controllers
 
             return View();
         }
+        public IActionResult Leaderboard()
+        {
+            return View();
+        }
 
         public IActionResult Register()
         {
