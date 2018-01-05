@@ -13,7 +13,7 @@ namespace RaiderLeague.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index","Home");
         }
 
         public RegisterController(RaiderLeagueContext context)
