@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,12 +14,12 @@ namespace RaiderLeague.Models
     {
 
         // u dijagramu klasa ima setName ????
-
         public enum Role
         {
             IZAZIVAC, NAPADAC, ISCJELITELJ
         };
 
+        int time =0;
         public String log { get; set; }
         public int ID { get; set; }
        // Role role { get; set; }
@@ -26,17 +27,76 @@ namespace RaiderLeague.Models
         Boss boss { get; set; }
        // String player;
         Klasa k;
-
-
-        // opet u dijagramu klasa File u konstruktoru
-       /* public BattleLog (Difficulty t, String log,Boss b,Klasa k,int id)
+        Dictionary<int, float> graphDPS = null;
+        Dictionary<int, float> graphTPS = null;
+        Dictionary<int, float> graphHPS = null;
+        bool invalidInput = false;
+        public BattleLog(String path)
         {
-            this.ID = id;
-            this.boss = b;
-            this.difficulty = t;
-            this.log = log;
-            this.k = k;
-        }*/
+            graphDPS = new Dictionary<int, float>();
+            graphTPS = new Dictionary<int, float>();
+            graphHPS = new Dictionary<int, float>();
+            List<String> dnevnik = new List<String>();
+            try
+            {
+                using (var reader = new StreamReader(path))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        dnevnik.Add(reader.ReadLine());
+                        invalidInput = false;
+                    }
+                }
+                analizator(dnevnik);
+            }catch(Exception e)
+            {
+                invalidInput = true;
+            }
+        }
 
+        public List<String> getResult()
+        {
+            List <String> ret = new List<String>();
+            if (invalidInput)
+            {
+                ret.Add("Invalid input!");
+            }
+            else
+            {
+
+                ret.Add(graphTPS[time].ToString());
+                ret.Add(graphDPS[time].ToString());
+                ret.Add(graphHPS[time].ToString());
+            }
+            return ret;
+        }
+
+        public void analizator(List<String> dnevnik)
+        {
+
+            bool first = true;
+            int dps = 0;
+            int tps = 0;
+            int hps = 0;
+            foreach (String x in dnevnik)
+            {
+                if (!first && !invalidInput)
+                {
+                    time = int.Parse(x.Split('|')[0].Split(':')[0]) * 60 + int.Parse(x.Split('|')[0].Split(':')[1]);
+                    System.Console.WriteLine(time);
+                    tps += int.Parse(x.Split('|')[2]);
+                    dps += int.Parse(x.Split('|')[3]);
+                    hps += int.Parse(x.Split('|')[4]);
+                    graphTPS.Add(time, tps / time);
+                    graphDPS.Add(time, dps / time);
+                    graphHPS.Add(time, hps / time);
+                }
+                else
+                {
+                    first = false;
+                }
+                
+            }
+        }
     }
 }
