@@ -13162,7 +13162,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nikola\\.nuget\\packages\\": {},
+    "C:\\Users\\ivan\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13171,17 +13171,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nikola\\OPP\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
+      "projectUniqueName": "C:\\Users\\ivan\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
       "projectName": "RaiderLeague",
-      "projectPath": "C:\\Users\\Nikola\\OPP\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
-      "packagesPath": "C:\\Users\\Nikola\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nikola\\OPP\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\obj\\",
+      "projectPath": "C:\\Users\\ivan\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
+      "packagesPath": "C:\\Users\\ivan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ivan\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Nikola\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -38,5 +38,10 @@ namespace RaiderLeague.Controllers
             }
             return View(registeredUser);
         }
+        public JsonResult IsUserExists(string UserName)
+        {
+            //check if any of the UserName matches the UserName specified in the Parameter using the ANY extension method.  
+            return Json(!_context.RegisteredUser.Any(x => x.Username == UserName));
+        }
     }
 }

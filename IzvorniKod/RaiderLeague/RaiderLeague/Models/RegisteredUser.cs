@@ -1,4 +1,5 @@
 ﻿//using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
@@ -29,10 +30,12 @@ namespace RaiderLeague.Models
 
 
         public int ID { get; set; }
-
+        [Required]
+        [Remote("IsUserExists", "Register", ErrorMessage = "User Name already in use")]
         public String Username { get; set; }
-
+        [Required]
         public String Email { get; set; }
+        [Required]
         public String Password { get; set; }
         //String name;
         //String surname;

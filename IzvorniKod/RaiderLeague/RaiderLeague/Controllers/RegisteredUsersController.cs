@@ -85,7 +85,7 @@ namespace RaiderLeague.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Username,Email,Password")] RegisteredUser registeredUser)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Username,Email,Password,Klasa")] RegisteredUser registeredUser)
         {
             if (id != registeredUser.ID)
             {
