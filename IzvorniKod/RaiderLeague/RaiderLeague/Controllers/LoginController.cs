@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using RaiderLeague.Models;
 
+
+
 namespace RaiderLeague.Controllers
 {
     public class LoginController : Controller
@@ -21,6 +23,33 @@ namespace RaiderLeague.Controllers
             return View();
         
         }
+
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(Models.RegisteredUser user)
+        {
+            
+                if (user.IsValid(user.Username, user.Password))
+                {
+                    
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Login data is incorrect!");
+                    return View();
+                }
+            
+           
+        }
+        
+
+
 
         public LoginController(RaiderLeagueContext context)
         {

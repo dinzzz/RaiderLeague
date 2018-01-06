@@ -7,6 +7,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace RaiderLeague.Models
 {
@@ -37,6 +39,8 @@ namespace RaiderLeague.Models
         public String Email { get; set; }
         [Required]
         public String Password { get; set; }
+        //CHANGE BY DINZ -- LOGIN
+        
         //String name;
         //String surname;
         //bool loggedOn { get; set; }
@@ -55,65 +59,100 @@ namespace RaiderLeague.Models
             new SelectListItem { Text ="PLACENIK", Value ="PLACENIK" }
             };
         }
-    
-    /*
+        //CHANGE DINZ
+        
+        public bool IsValid(string _username, string _password)
+        {
+            
+            using (var cn = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename" +
+              @"='C:\Tutorials\1 - Creating a custom user login form\Creating " +
+              @"a custom user login form\App_Data\Database1.mdf';Integrated Security=True"))
+            {
+                string _sql = @"SELECT [Username] FROM [dbo].[System_Users] " +
+                       @"WHERE [Username] = @u AND [Password] = @p";
+                var cmd = new SqlCommand(_sql, cn);
+                cmd.Parameters
+                    .Add(new SqlParameter("@u", SqlDbType.NVarChar))
+                    .Value = _username;
+                cmd.Parameters
+                    .Add(new SqlParameter("@p", SqlDbType.NVarChar))
+                    .Value = _password;
+                cn.Open();
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Dispose();
+                    cmd.Dispose();
+                    return true;
+                }
+                else
+                {
+                    reader.Dispose();
+                    cmd.Dispose();
+                    return false;
+                }
+            }
+        }
+        
 
-    public RegisteredUser(String username, String email, String password)
-    {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-    }*/
+        /*
 
-    // u narednim redovima -- checkirati da li su potrebni ovi usernameovi
-    // i passwordi u metodama add/remove i login i provjeriti kaj je s delete i ID-em
-    // također i izmjeniti dijagram klasa u dokumentaciji sukladno s onim kak treba bit
-    /*
-    public void setAccessLevel( AccessLevel a)
-    {
-        this.accessLevel = a; 
+        public RegisteredUser(String username, String email, String password)
+        {
+            this.username = username;
+            this.email = email;
+            this.password = password;
+        }*/
+
+        // u narednim redovima -- checkirati da li su potrebni ovi usernameovi
+        // i passwordi u metodama add/remove i login i provjeriti kaj je s delete i ID-em
+        // također i izmjeniti dijagram klasa u dokumentaciji sukladno s onim kak treba bit
+        /*
+        public void setAccessLevel( AccessLevel a)
+        {
+            this.accessLevel = a; 
+        }
+        public void addMedal(MedalType medal, String username)
+        {
+            medals.Add(medal);
+        }
+
+        public void removeMedal(MedalType medal, String username)
+        {
+            medals.Remove(medal);
+        }
+
+        public void addResult(Result result)
+        {
+            results.Add(result);
+        }
+
+        public void removeResult(Result result)
+        {
+            results.Remove(result);
+        }
+
+        public void login(String username, String password)
+        {
+            loggedOn = true;
+        }
+
+        public void logout()
+        {
+            loggedOn = false;
+        }
+
+        public void deleteUser()
+        {
+        }*/
+
+
+
+
+
+
+
+
+
     }
-    public void addMedal(MedalType medal, String username)
-    {
-        medals.Add(medal);
-    }
-
-    public void removeMedal(MedalType medal, String username)
-    {
-        medals.Remove(medal);
-    }
-
-    public void addResult(Result result)
-    {
-        results.Add(result);
-    }
-
-    public void removeResult(Result result)
-    {
-        results.Remove(result);
-    }
-
-    public void login(String username, String password)
-    {
-        loggedOn = true;
-    }
-
-    public void logout()
-    {
-        loggedOn = false;
-    }
-
-    public void deleteUser()
-    {
-    }*/
-
-
-
-
-
-
-
-
-
-}
 }

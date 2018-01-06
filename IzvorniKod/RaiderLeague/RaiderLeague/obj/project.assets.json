@@ -6103,17 +6103,17 @@
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
-      "sha512": "HS3iRWZKcUw/8eZ/08GXKY2Bn7xNzQPzf8gRPHGSowX7u7XXu9i9YEaBeBNKUXWfI7qjvT2zXtLUvbN0hds8vg==",
+      "sha512": "KPbJ3skq9kgImQ2mcSWbORPqRi5Jo6Ug4bjvnj6C2AT9/+KaQapmeWTzXI8yLS4kY0bXTTec8YO0p3ArKFlsLQ==",
       "type": "package",
       "path": "microsoft.codeanalysis.analyzers/1.1.0",
       "files": [
+        "Microsoft.CodeAnalysis.Analyzers.1.1.0.nupkg.sha512",
+        "Microsoft.CodeAnalysis.Analyzers.nuspec",
         "ThirdPartyNotices.rtf",
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.Analyzers.dll",
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.CSharp.Analyzers.dll",
         "analyzers/dotnet/vb/Microsoft.CodeAnalysis.Analyzers.dll",
         "analyzers/dotnet/vb/Microsoft.CodeAnalysis.VisualBasic.Analyzers.dll",
-        "microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",
-        "microsoft.codeanalysis.analyzers.nuspec",
         "tools/install.ps1",
         "tools/uninstall.ps1"
       ]
@@ -10220,10 +10220,12 @@
       ]
     },
     "System.Linq.Queryable/4.0.1": {
-      "sha512": "Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
+      "sha512": "u4CTEjgZrtl/BvcIvdMLGzp+d0/CHbaNi5FK1/y/CZAS3qex+uCRjyTzT9J/6U1wu0C3Lvi2bU80ORfz6i4AhQ==",
       "type": "package",
       "path": "system.linq.queryable/4.0.1",
       "files": [
+        "System.Linq.Queryable.4.0.1.nupkg.sha512",
+        "System.Linq.Queryable.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/monoandroid10/_._",
@@ -10271,9 +10273,7 @@
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.linq.queryable.4.0.1.nupkg.sha512",
-        "system.linq.queryable.nuspec"
+        "ref/xamarinwatchos10/_._"
       ]
     },
     "System.Net.Http/4.3.0": {
@@ -13162,7 +13162,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ivan\\.nuget\\packages\\": {},
+    "C:\\Users\\Dinz\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13171,17 +13171,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\ivan\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
+      "projectUniqueName": "C:\\Users\\Dinz\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
       "projectName": "RaiderLeague",
-      "projectPath": "C:\\Users\\ivan\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
-      "packagesPath": "C:\\Users\\ivan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ivan\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\obj\\",
+      "projectPath": "C:\\Users\\Dinz\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
+      "packagesPath": "C:\\Users\\Dinz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dinz\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dinz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13205,26 +13205,26 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "EntityFramework": {
-            "target": "Package",
-            "version": "[6.2.0, )"
-          },
-          "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "[2.0.3, )"
-          },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "[2.0.1, )"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "[2.0.0, )",
-            "autoReferenced": true
+            "version": "2.0.1"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "[2.0.1, )"
+            "version": "2.0.1"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "2.0.0",
+            "autoReferenced": true
+          },
+          "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "2.0.3"
+          },
+          "EntityFramework": {
+            "target": "Package",
+            "version": "6.2.0"
           }
         },
         "imports": [
