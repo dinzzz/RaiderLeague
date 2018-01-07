@@ -34,10 +34,10 @@ namespace RaiderLeague.Controllers
         public ActionResult Login(Models.RegisteredUser user)
         {
             
-                if (user.IsValid(user.Username, user.Password))
+                if (ValidateUser(user.Username, user.Password))
                 {
                     
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "LoggedIn");
                 }
                 else
                 {
@@ -54,6 +54,14 @@ namespace RaiderLeague.Controllers
         public LoginController(RaiderLeagueContext context)
         {
             _context = context;
+        }
+
+        public bool ValidateUser(string username, string password)
+        {
+            IQueryable<RegisteredUser> list = _context.RegisteredUser.Where(d => (d.Username.Equals(username) && d.Password.Equals(password)));
+            if (list.Any()) return true;
+            return false;
+
         }
     }
 }

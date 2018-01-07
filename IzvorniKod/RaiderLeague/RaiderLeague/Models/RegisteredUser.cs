@@ -64,9 +64,7 @@ namespace RaiderLeague.Models
         public bool IsValid(string _username, string _password)
         {
             
-            using (var cn = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename" +
-              @"='C:\Tutorials\1 - Creating a custom user login form\Creating " +
-              @"a custom user login form\App_Data\Database1.mdf';Integrated Security=True"))
+            using (var cn = new SqlConnection(@"Server = (localdb)\\mssqllocaldb; Database = RaiderLeagueContext - cd918cb8 - 59ce - 4194 - bb29 - 4885d611eda4; Trusted_Connection = True; MultipleActiveResultSets = true"))
             {
                 string _sql = @"SELECT [Username] FROM [dbo].[System_Users] " +
                        @"WHERE [Username] = @u AND [Password] = @p";
@@ -77,7 +75,9 @@ namespace RaiderLeague.Models
                 cmd.Parameters
                     .Add(new SqlParameter("@p", SqlDbType.NVarChar))
                     .Value = _password;
-                cn.Open();
+
+                
+                //cn.Open();
                 var reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
