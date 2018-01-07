@@ -13,6 +13,12 @@
     <thead>
         <tr>
                 <th>
+                    @Html.DisplayNameFor(model => model.klasa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.role)
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.log)
                 </th>
             <th></th>
@@ -22,12 +28,18 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.klasa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.role)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.log)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.battleLogID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.battleLogID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.battleLogID">Delete</a>
             </td>
         </tr>
 }

@@ -19,18 +19,29 @@ namespace RaiderLeague.Models
             IZAZIVAC, NAPADAC, ISCJELITELJ
         };
 
-        int time =0;
+        public int battleLogID { get; set; }
+        // String player;
+        public Klasa? klasa { get; set; }
+        public Role? role { get; set; }
+        //tezina u dnevniku nije potrebna, ona se bazira na tezini boss-a
+        public virtual RegisteredUser user { get; set; }
+        public virtual Operation operation { get; set; }
+        public virtual Boss boss { get; set; }
+
         public String log { get; set; }
-        public int ID { get; set; }
+
+
+        //public int ID { get; set; }
        // Role role { get; set; }
-        Difficulty difficulty { get; set; }
-        Boss boss { get; set; }
+        //Difficulty difficulty { get; set; }
+        //Boss boss { get; set; }
        // String player;
-        Klasa k;
+        //Klasa k;
         Dictionary<int, float> graphDPS = null;
         Dictionary<int, float> graphTPS = null;
         Dictionary<int, float> graphHPS = null;
         bool invalidInput = false;
+        int time =0;
         public BattleLog(String path)
         {
             graphDPS = new Dictionary<int, float>();

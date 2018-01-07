@@ -12,21 +12,26 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ID" />
+            <input type="hidden" asp-for="BossID" />
             <div class="form-group">
-                <label asp-for="bossName" class="control-label"></label>
-                <input asp-for="bossName" class="form-control" />
-                <span asp-validation-for="bossName" class="text-danger"></span>
+                <label asp-for="BossName" class="control-label"></label>
+                <input asp-for="BossName" class="form-control" />
+                <span asp-validation-for="BossName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="health" class="control-label"></label>
-                <input asp-for="health" class="form-control" />
-                <span asp-validation-for="health" class="text-danger"></span>
+                <label asp-for="Health" class="control-label"></label>
+                <input asp-for="Health" class="form-control" />
+                <span asp-validation-for="Health" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="damage" class="control-label"></label>
-                <input asp-for="damage" class="form-control" />
-                <span asp-validation-for="damage" class="text-danger"></span>
+                <label asp-for="Damage" class="control-label"></label>
+                <input asp-for="Damage" class="form-control" />
+                <span asp-validation-for="Damage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Difficulty" class="control-label"></label>
+                <input asp-for="Difficulty" class="form-control" />
+                <span asp-validation-for="Difficulty" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
@@ -39,6 +44,3 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

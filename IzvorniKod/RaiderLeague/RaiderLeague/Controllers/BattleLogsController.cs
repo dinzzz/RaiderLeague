@@ -33,7 +33,7 @@ namespace RaiderLeague.Controllers
             }
 
             var battleLog = await _context.BattleLog
-                .SingleOrDefaultAsync(m => m.ID == id);
+                .SingleOrDefaultAsync(m => m.battleLogID == id);
             if (battleLog == null)
             {
                 return NotFound();
@@ -53,7 +53,7 @@ namespace RaiderLeague.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("log,ID")] BattleLog battleLog)
+        public async Task<IActionResult> Create([Bind("battleLogID,klasa,role,log")] BattleLog battleLog)
         {
             if (ModelState.IsValid)
             {
@@ -72,7 +72,7 @@ namespace RaiderLeague.Controllers
                 return NotFound();
             }
 
-            var battleLog = await _context.BattleLog.SingleOrDefaultAsync(m => m.ID == id);
+            var battleLog = await _context.BattleLog.SingleOrDefaultAsync(m => m.battleLogID == id);
             if (battleLog == null)
             {
                 return NotFound();
@@ -85,9 +85,9 @@ namespace RaiderLeague.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("log,ID")] BattleLog battleLog)
+        public async Task<IActionResult> Edit(int id, [Bind("battleLogID,klasa,role,log")] BattleLog battleLog)
         {
-            if (id != battleLog.ID)
+            if (id != battleLog.battleLogID)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace RaiderLeague.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BattleLogExists(battleLog.ID))
+                    if (!BattleLogExists(battleLog.battleLogID))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace RaiderLeague.Controllers
             }
 
             var battleLog = await _context.BattleLog
-                .SingleOrDefaultAsync(m => m.ID == id);
+                .SingleOrDefaultAsync(m => m.battleLogID == id);
             if (battleLog == null)
             {
                 return NotFound();
@@ -138,7 +138,7 @@ namespace RaiderLeague.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var battleLog = await _context.BattleLog.SingleOrDefaultAsync(m => m.ID == id);
+            var battleLog = await _context.BattleLog.SingleOrDefaultAsync(m => m.battleLogID == id);
             _context.BattleLog.Remove(battleLog);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -146,7 +146,7 @@ namespace RaiderLeague.Controllers
 
         private bool BattleLogExists(int id)
         {
-            return _context.BattleLog.Any(e => e.ID == id);
+            return _context.BattleLog.Any(e => e.battleLogID == id);
         }
     }
 }
