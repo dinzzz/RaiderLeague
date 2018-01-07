@@ -4,6 +4,11 @@
     ViewData["Title"] = "Index";
 }
 
+@{
+    Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
+
+}
+
 <h2>Index</h2>
 
 @using (Html.BeginForm("Uploaded", "UploadBattleLog", FormMethod.Post))

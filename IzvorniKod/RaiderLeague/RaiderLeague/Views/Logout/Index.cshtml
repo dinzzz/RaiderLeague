@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@{
+    Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
+
+}
+
+<h2>Logout page</h2>
+
+<h2>Are you sure you want to log out?</h2>
+
+<input type="button" value=" Logout" onclick="location.href='@Url.Action("Index", "Home")'" />
