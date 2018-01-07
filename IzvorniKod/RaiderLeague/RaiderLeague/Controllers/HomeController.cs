@@ -37,7 +37,7 @@ namespace RaiderLeague.Controllers
         }
         public IActionResult Leaderboard()
         {
-            return View();
+            return RedirectToAction("Index", "Leaderboard");
         }
 
         public IActionResult Register()
