@@ -12,6 +12,18 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.klasa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.klasa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.role)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.role)
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.log)
         </dt>
         <dd>
@@ -20,7 +32,7 @@
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="ID" />
+        <input type="hidden" asp-for="battleLogID" />
         <input type="submit" value="Delete" class="btn btn-default" /> |
         <a asp-action="Index">Back to List</a>
     </form>

@@ -8,12 +8,21 @@ namespace RaiderLeague.Models
     public class Boss
     {
 
-        public int ID { get; set; } 
-        public String bossName { get; set; }
-        public int health { get; set; } //popraviti geter u dijagramu klasa
-        public int damage { get; set; }
-        public int operationID;
-        Difficulty difficulty { get; set; } // dodati u dijagram klasa
+        public int BossID { get; set; }
+        public String BossName { get; set; }
+        public int Health { get; set; } //popraviti geter u dijagramu klasa
+        public int Damage { get; set; }
+        public Difficulty? Difficulty { get; set; } // dodati u dijagram klasa
+
+        public virtual Operation Operation { get; set; }
+        public virtual ICollection<BattleLog> BattleLog { get; set; }
+
+
+
+
+
+
+        //izbaciti IDoperacije iz dokumentacije
 
         /*public Boss(String bossName, int damage, int health, Difficulty difficulty, int operationID)
         {

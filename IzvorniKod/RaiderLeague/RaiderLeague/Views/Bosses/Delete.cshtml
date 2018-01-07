@@ -12,27 +12,33 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.bossName)
+            @Html.DisplayNameFor(model => model.BossName)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.bossName)
+            @Html.DisplayFor(model => model.BossName)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.health)
+            @Html.DisplayNameFor(model => model.Health)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.health)
+            @Html.DisplayFor(model => model.Health)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.damage)
+            @Html.DisplayNameFor(model => model.Damage)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.damage)
+            @Html.DisplayFor(model => model.Damage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Difficulty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Difficulty)
         </dd>
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="ID" />
+        <input type="hidden" asp-for="BossID" />
         <input type="submit" value="Delete" class="btn btn-default" /> |
         <a asp-action="Index">Back to List</a>
     </form>

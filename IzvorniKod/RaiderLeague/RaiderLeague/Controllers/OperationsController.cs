@@ -33,7 +33,7 @@ namespace RaiderLeague.Controllers
             }
 
             var operation = await _context.Operation
-                .SingleOrDefaultAsync(m => m.ID == id);
+                .SingleOrDefaultAsync(m => m.operationID == id);
             if (operation == null)
             {
                 return NotFound();
@@ -53,7 +53,7 @@ namespace RaiderLeague.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,OperationName")] Operation operation)
+        public async Task<IActionResult> Create([Bind("operationID,OperationName,difficulty")] Operation operation)
         {
             if (ModelState.IsValid)
             {
@@ -72,7 +72,7 @@ namespace RaiderLeague.Controllers
                 return NotFound();
             }
 
-            var operation = await _context.Operation.SingleOrDefaultAsync(m => m.ID == id);
+            var operation = await _context.Operation.SingleOrDefaultAsync(m => m.operationID == id);
             if (operation == null)
             {
                 return NotFound();
@@ -85,9 +85,9 @@ namespace RaiderLeague.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,OperationName")] Operation operation)
+        public async Task<IActionResult> Edit(int id, [Bind("operationID,OperationName,difficulty")] Operation operation)
         {
-            if (id != operation.ID)
+            if (id != operation.operationID)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace RaiderLeague.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!OperationExists(operation.ID))
+                    if (!OperationExists(operation.operationID))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace RaiderLeague.Controllers
             }
 
             var operation = await _context.Operation
-                .SingleOrDefaultAsync(m => m.ID == id);
+                .SingleOrDefaultAsync(m => m.operationID == id);
             if (operation == null)
             {
                 return NotFound();
@@ -138,7 +138,7 @@ namespace RaiderLeague.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var operation = await _context.Operation.SingleOrDefaultAsync(m => m.ID == id);
+            var operation = await _context.Operation.SingleOrDefaultAsync(m => m.operationID == id);
             _context.Operation.Remove(operation);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -146,7 +146,7 @@ namespace RaiderLeague.Controllers
 
         private bool OperationExists(int id)
         {
-            return _context.Operation.Any(e => e.ID == id);
+            return _context.Operation.Any(e => e.operationID == id);
         }
     }
 }
