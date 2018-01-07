@@ -33,7 +33,7 @@ namespace RaiderLeague.Controllers
             }
 
             var boss = await _context.Boss
-                .SingleOrDefaultAsync(m => m.BossID == id);
+                .SingleOrDefaultAsync(m => m.ID == id);
             if (boss == null)
             {
                 return NotFound();
@@ -53,7 +53,7 @@ namespace RaiderLeague.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BossID,BossName,Health,Damage,Difficulty")] Boss boss)
+        public async Task<IActionResult> Create([Bind("ID,BossName,Health,Damage,Difficulty")] Boss boss)
         {
             if (ModelState.IsValid)
             {
@@ -72,7 +72,7 @@ namespace RaiderLeague.Controllers
                 return NotFound();
             }
 
-            var boss = await _context.Boss.SingleOrDefaultAsync(m => m.BossID == id);
+            var boss = await _context.Boss.SingleOrDefaultAsync(m => m.ID == id);
             if (boss == null)
             {
                 return NotFound();
@@ -85,9 +85,9 @@ namespace RaiderLeague.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BossID,BossName,Health,Damage,Difficulty")] Boss boss)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,BossName,Health,Damage,Difficulty")] Boss boss)
         {
-            if (id != boss.BossID)
+            if (id != boss.ID)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace RaiderLeague.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BossExists(boss.BossID))
+                    if (!BossExists(boss.ID))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace RaiderLeague.Controllers
             }
 
             var boss = await _context.Boss
-                .SingleOrDefaultAsync(m => m.BossID == id);
+                .SingleOrDefaultAsync(m => m.ID == id);
             if (boss == null)
             {
                 return NotFound();
@@ -138,7 +138,7 @@ namespace RaiderLeague.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var boss = await _context.Boss.SingleOrDefaultAsync(m => m.BossID == id);
+            var boss = await _context.Boss.SingleOrDefaultAsync(m => m.ID == id);
             _context.Boss.Remove(boss);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -146,7 +146,7 @@ namespace RaiderLeague.Controllers
 
         private bool BossExists(int id)
         {
-            return _context.Boss.Any(e => e.BossID == id);
+            return _context.Boss.Any(e => e.ID == id);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace RaiderLeague.Models
             IZAZIVAC, NAPADAC, ISCJELITELJ
         };
 
-        public int battleLogID { get; set; }
+        public int ID { get; set; }
         // String player;
         public Klasa? klasa { get; set; }
         public Role? role { get; set; }
@@ -27,6 +27,7 @@ namespace RaiderLeague.Models
         public virtual RegisteredUser user { get; set; }
         public virtual Operation operation { get; set; }
         public virtual Boss boss { get; set; }
+        public virtual Result Result { get; set; }
 
         public String log { get; set; }
 
@@ -42,6 +43,7 @@ namespace RaiderLeague.Models
         Dictionary<int, float> graphHPS = null;
         bool invalidInput = false;
         int time =0;
+        /*
         public BattleLog(String path)
         {
             graphDPS = new Dictionary<int, float>();
@@ -64,7 +66,7 @@ namespace RaiderLeague.Models
                 invalidInput = true;
             }
         }
-
+        */
         public List<String> getResult()
         {
             List <String> ret = new List<String>();

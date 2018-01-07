@@ -25,5 +25,6 @@ namespace RaiderLeague.Models
         public DbSet<RaiderLeague.Models.ErrorViewModel> ErrorViewModel { get; set; }
 
         public DbSet<RaiderLeague.Models.Result> Result { get; set; }
+
     }
 }

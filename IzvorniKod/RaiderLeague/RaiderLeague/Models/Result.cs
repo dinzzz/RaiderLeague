@@ -13,6 +13,8 @@ namespace RaiderLeague.Models
         public float TPS;
         public float DPS;
 
+        public virtual BattleLog BattleLog { get; set; }
+
         public void calculateResult()
         {
         }

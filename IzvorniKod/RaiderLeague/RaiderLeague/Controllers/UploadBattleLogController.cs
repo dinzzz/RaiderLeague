@@ -21,7 +21,7 @@ namespace RaiderLeague.Controllers
         [HttpPost]
         public ActionResult Uploaded(BattleLogUpload model)
         {
-            
+            /*
             if (ModelState.IsValid)
             {
                 BattleLog x = new BattleLog(model.battleLogUpload);
@@ -35,7 +35,7 @@ namespace RaiderLeague.Controllers
                     ViewData["dps"] = "DPS= "+x.getResult().ElementAt(1);
                     ViewData["hps"] = "HPS= "+x.getResult().ElementAt(2);
                 }
-            }
+            }*/
             
             return View();
         }       

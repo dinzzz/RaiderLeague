@@ -9,7 +9,7 @@ namespace RaiderLeague.Models
     {
 
 
-        public int operationID { get; set; }
+        public int ID { get; set; }
         public String OperationName { get; set; }
 
         public Difficulty? difficulty { get; set; } // dodati ovo u dijagram klasa

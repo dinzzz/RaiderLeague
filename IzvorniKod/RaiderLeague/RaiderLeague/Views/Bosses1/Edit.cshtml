@@ -1,0 +1,46 @@
+﻿@model RaiderLeague.Models.Boss
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Boss</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="bossName" class="control-label"></label>
+                <input asp-for="bossName" class="form-control" />
+                <span asp-validation-for="bossName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="health" class="control-label"></label>
+                <input asp-for="health" class="form-control" />
+                <span asp-validation-for="health" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="damage" class="control-label"></label>
+                <input asp-for="damage" class="form-control" />
+                <span asp-validation-for="damage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="difficulty" class="control-label"></label>
+                <select asp-for="difficulty" class="form-control"></select>
+                <span asp-validation-for="difficulty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

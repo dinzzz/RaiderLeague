@@ -22,10 +22,9 @@ namespace RaiderLeague.Migrations
 
             modelBuilder.Entity("RaiderLeague.Models.BattleLog", b =>
                 {
-                    b.Property<int>("battleLogID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("ID");
 
-                    b.Property<int?>("BossID");
+                    b.Property<int?>("bossID");
 
                     b.Property<int?>("klasa");
 
@@ -37,9 +36,9 @@ namespace RaiderLeague.Migrations
 
                     b.Property<int?>("userID");
 
-                    b.HasKey("battleLogID");
+                    b.HasKey("ID");
 
-                    b.HasIndex("BossID");
+                    b.HasIndex("bossID");
 
                     b.HasIndex("operationID");
 
@@ -50,7 +49,7 @@ namespace RaiderLeague.Migrations
 
             modelBuilder.Entity("RaiderLeague.Models.Boss", b =>
                 {
-                    b.Property<int>("BossID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("BossName");
@@ -61,11 +60,11 @@ namespace RaiderLeague.Migrations
 
                     b.Property<int>("Health");
 
-                    b.Property<int?>("operationID");
+                    b.Property<int?>("OperationID");
 
-                    b.HasKey("BossID");
+                    b.HasKey("ID");
 
-                    b.HasIndex("operationID");
+                    b.HasIndex("OperationID");
 
                     b.ToTable("Boss");
                 });
@@ -84,14 +83,14 @@ namespace RaiderLeague.Migrations
 
             modelBuilder.Entity("RaiderLeague.Models.Operation", b =>
                 {
-                    b.Property<int>("operationID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("OperationName");
 
                     b.Property<int?>("difficulty");
 
-                    b.HasKey("operationID");
+                    b.HasKey("ID");
 
                     b.ToTable("Operation");
                 });
@@ -129,9 +128,14 @@ namespace RaiderLeague.Migrations
 
             modelBuilder.Entity("RaiderLeague.Models.BattleLog", b =>
                 {
+                    b.HasOne("RaiderLeague.Models.Result", "Result")
+                        .WithOne("BattleLog")
+                        .HasForeignKey("RaiderLeague.Models.BattleLog", "ID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("RaiderLeague.Models.Boss", "boss")
                         .WithMany("BattleLog")
-                        .HasForeignKey("BossID");
+                        .HasForeignKey("bossID");
 
                     b.HasOne("RaiderLeague.Models.Operation", "operation")
                         .WithMany("dnevnici")
@@ -146,7 +150,7 @@ namespace RaiderLeague.Migrations
                 {
                     b.HasOne("RaiderLeague.Models.Operation", "Operation")
                         .WithMany("bosses")
-                        .HasForeignKey("operationID");
+                        .HasForeignKey("OperationID");
                 });
 #pragma warning restore 612, 618
         }
