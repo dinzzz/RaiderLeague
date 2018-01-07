@@ -13,6 +13,11 @@ namespace RaiderLeague.Controllers
             return View();
         }
 
+        public IActionResult LoggedIn()
+        {
+            return View();
+        }
+
         //ovdje bi mogao ici dio koda koji obraduje podatke u bazi i ovdje prikazuje leaderboard
     }
 }
