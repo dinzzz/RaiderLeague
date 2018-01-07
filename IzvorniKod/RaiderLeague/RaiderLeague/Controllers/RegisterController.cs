@@ -33,6 +33,7 @@ namespace RaiderLeague.Controllers
         {
             if (ModelState.IsValid)
             {
+                registeredUser.AccessLevel = AccessLevel.USER;
                 _context.Add(registeredUser);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

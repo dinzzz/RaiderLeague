@@ -16,12 +16,14 @@ namespace RaiderLeague.Models
     {
         RATNIK, CAROBNJAK, AGENT, PLACENIK
     };
+    public enum AccessLevel
+    {
+        ADMIN, USER
+    };
+
     public class RegisteredUser
     {
-        public enum AccessLevel
-        {
-            ADMIN, USER
-        };
+
 
 
         public enum MedalType
@@ -39,12 +41,12 @@ namespace RaiderLeague.Models
         public String Email { get; set; }
         [Required]
         public String Password { get; set; }
+        public AccessLevel AccessLevel { get; set; }
         //CHANGE BY DINZ -- LOGIN
-        
+
         //String name;
         //String surname;
         //bool loggedOn { get; set; }
-        //AccessLevel accessLevel { get; set; }
         // List<MedalType> medals { get; }
         //List<Result> results { get; }
         public Klasa Klasa { get; set; }

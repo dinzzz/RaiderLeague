@@ -12,9 +12,10 @@ using System;
 namespace RaiderLeague.Migrations
 {
     [DbContext(typeof(RaiderLeagueContext))]
-    partial class RaiderLeagueContextModelSnapshot : ModelSnapshot
+    [Migration("20180107163922_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -23,9 +24,10 @@ namespace RaiderLeague.Migrations
 
             modelBuilder.Entity("RaiderLeague.Models.BattleLog", b =>
                 {
-                    b.Property<int>("ID");
+                    b.Property<int>("battleLogID")
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("bossID");
+                    b.Property<int?>("BossID");
 
                     b.Property<int?>("klasa");
 
@@ -37,9 +39,9 @@ namespace RaiderLeague.Migrations
 
                     b.Property<int?>("userID");
 
-                    b.HasKey("ID");
+                    b.HasKey("battleLogID");
 
-                    b.HasIndex("bossID");
+                    b.HasIndex("BossID");
 
                     b.HasIndex("operationID");
 
@@ -50,7 +52,7 @@ namespace RaiderLeague.Migrations
 
             modelBuilder.Entity("RaiderLeague.Models.Boss", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("BossID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("BossName");
@@ -61,11 +63,11 @@ namespace RaiderLeague.Migrations
 
                     b.Property<int>("Health");
 
-                    b.Property<int?>("OperationID");
+                    b.Property<int?>("operationID");
 
-                    b.HasKey("ID");
+                    b.HasKey("BossID");
 
-                    b.HasIndex("OperationID");
+                    b.HasIndex("operationID");
 
                     b.ToTable("Boss");
                 });
@@ -84,14 +86,14 @@ namespace RaiderLeague.Migrations
 
             modelBuilder.Entity("RaiderLeague.Models.Operation", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("operationID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("OperationName");
 
                     b.Property<int?>("difficulty");
 
-                    b.HasKey("ID");
+                    b.HasKey("operationID");
 
                     b.ToTable("Operation");
                 });
@@ -131,14 +133,9 @@ namespace RaiderLeague.Migrations
 
             modelBuilder.Entity("RaiderLeague.Models.BattleLog", b =>
                 {
-                    b.HasOne("RaiderLeague.Models.Result", "Result")
-                        .WithOne("BattleLog")
-                        .HasForeignKey("RaiderLeague.Models.BattleLog", "ID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("RaiderLeague.Models.Boss", "boss")
                         .WithMany("BattleLog")
-                        .HasForeignKey("bossID");
+                        .HasForeignKey("BossID");
 
                     b.HasOne("RaiderLeague.Models.Operation", "operation")
                         .WithMany("dnevnici")
@@ -153,7 +150,7 @@ namespace RaiderLeague.Migrations
                 {
                     b.HasOne("RaiderLeague.Models.Operation", "Operation")
                         .WithMany("bosses")
-                        .HasForeignKey("OperationID");
+                        .HasForeignKey("operationID");
                 });
 #pragma warning restore 612, 618
         }
