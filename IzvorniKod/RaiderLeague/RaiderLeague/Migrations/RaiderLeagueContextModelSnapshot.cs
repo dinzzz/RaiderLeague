@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using RaiderLeague.Models;
+
 using System;
 
 namespace RaiderLeague.Migrations
@@ -100,6 +101,8 @@ namespace RaiderLeague.Migrations
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<int>("AccessLevel");
 
                     b.Property<string>("Email")
                         .IsRequired();

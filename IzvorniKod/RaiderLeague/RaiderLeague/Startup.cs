@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using RaiderLeague.Models;
 
+
 namespace RaiderLeague
 {
     public class Startup
@@ -28,11 +29,11 @@ namespace RaiderLeague
             services.AddDbContext<RaiderLeagueContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("RaiderLeagueContext")));
 
-           
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, RaiderLeagueContext context)
         {
             if (env.IsDevelopment())
             {
@@ -44,6 +45,7 @@ namespace RaiderLeague
                 app.UseExceptionHandler("/Home/Error");
             }
 
+
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
@@ -52,6 +54,21 @@ namespace RaiderLeague
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            context.Database.EnsureCreated();
+            var admin = new RegisteredUser()
+            {
+                Username = "admin",
+                Password = "admin",
+                Email = "admin@admin.com",
+                AccessLevel = AccessLevel.ADMIN
+            };
+            if(context.RegisteredUser.Where(us => us.Username == "admin").FirstOrDefaultAsync() == null)
+            {
+                context.RegisteredUser.Add(admin);
+                context.SaveChanges();
+            }
+
         }
     }
 }
