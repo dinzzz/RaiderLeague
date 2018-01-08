@@ -13162,7 +13162,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nikola\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13171,17 +13171,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nikola\\OPP\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\Projekt\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
       "projectName": "RaiderLeague",
-      "projectPath": "C:\\Users\\Nikola\\OPP\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
-      "packagesPath": "C:\\Users\\Nikola\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nikola\\OPP\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\Projekt\\IzvorniKod\\RaiderLeague\\RaiderLeague\\RaiderLeague.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\Projekt\\IzvorniKod\\RaiderLeague\\RaiderLeague\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Nikola\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13236,12 +13236,6 @@
     }
   },
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Nikola\\OPP\\Antitalenti\\IzvorniKod\\RaiderLeague\\RaiderLeague\\obj\\RaiderLeague.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",

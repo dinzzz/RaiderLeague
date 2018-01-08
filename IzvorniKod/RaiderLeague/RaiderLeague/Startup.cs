@@ -63,7 +63,7 @@ namespace RaiderLeague
                 Email = "admin@admin.com",
                 AccessLevel = AccessLevel.ADMIN
             };
-            if(context.RegisteredUser.Where(us => us.Username == "admin").FirstOrDefaultAsync() == null)
+            if(context.RegisteredUser.Where(us => us.Username == "admin").FirstOrDefault() == null)
             {
                 context.RegisteredUser.Add(admin);
                 context.SaveChanges();
