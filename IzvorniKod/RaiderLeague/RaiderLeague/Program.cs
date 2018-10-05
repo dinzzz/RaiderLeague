@@ -28,7 +28,7 @@ namespace RaiderLeague
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception();
+                    //throw new Exception();
                 }
             }
 
